@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Page</title>
+    <style>
+        /**margin 0 auto只对块元素生效*/
+        #title1{
+            width: 1458px;
+            height: 70px;
+            background: rgba(67, 119, 214, 0.7);
+            margin: 0 auto;
+        }
+
+        #title2{
+            width: 1008px;
+            height: 60px;
+            background: rgba(161, 211, 245, 0.7);
+            border-style: solid;
+            border-left-color: rgba(67, 119, 214, 0.7);
+            border-right-color: rgba(67, 119, 214, 0.7);
+            border-left-width: 225px;
+            border-right-width: 225px;
+            margin: 0 auto;
+        }
+
+        #message{
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content:space-between;
+            width: 1020px;
+            height: 65px;
+            background: rgb(63,121,179,0.7);
+            margin: 0 auto;
+        }
+        #message ul li{
+            display:inline;
+        }
+        #message a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 28px;
+            font-weight: 600;
+        }
+        #message ul li a:hover{
+            color: cornflowerblue;
+            background: #fff;
+            margin:0 auto;
+            width:58px;
+            height:58px;
+        }
+        #message ul li img{
+            width:58px;
+            height:58px;
+            border: 2px solid rgb(249,250,250,0.7);
+        }
+        #pictureBox{
+            width: 1000px;
+            height:1000px;
+            margin:0 auto;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content:space-between;
+            background: rgba(161, 211, 245, 0.7);
+            border-color: rgba(161, 211, 245, 0.7);
+            border-top-width: 30px;
+            border-left-width: 10px;
+            border-right-width: 10px;
+            border-bottom-width: 30px;
+            border-style: solid;
+            margin: 0 auto;
+        }
+        #pictureBox img{
+            width: 290px;
+            height: 290px;
+            margin: 5px;
+            border-color: rgba(249,250,250,0.7);
+            border-width: 15px;
+            border-style: solid;
+        }
+        #text{
+            width: 1020px;
+            height:520px;
+            margin: 0 auto;
+            border-top: rgba(67, 119, 214, 0.7);
+            border-style: solid;
+            border-left: rgba(161, 211, 245, 0.7);
+            border-right: rgba(161, 211, 245, 0.7);
+            border-bottom: rgba(161, 211, 245, 0.7);
+            background: rgba(161, 211, 245, 0.7);
+
+        }
+        #textcontent{
+            width: 1000px;
+            height: 400px;
+            background: rgba(249,250,250,0.7);
+            font-size: 25px;
+            font-family: Tahoma;
+            text-indent: 6%;
+            margin: 0 auto;
+            
+        }
+        #topic{
+            font-family: Tahoma;
+            font-size: 20px;
+        }
+        #topic ul li{
+            display:inline;
+        }
+        #topic ul li a{
+            float:left;
+            padding:5px 10px;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+
+        }
+        #topic ul li a:hover{
+            color: cornflowerblue;
+            background: #fff;
+        }
+        #topic a{
+            text-decoration: none;
+            color: rgb(83, 81, 81);
+        }
+        #thumbsUp{
+            width: 1020px;
+            height: 50px;
+            border-style: solid;
+            background: rgba(67, 119, 214, 0.7);
+            margin: 0 auto;
+        }
+        #thumbsUp img{
+            width:50px;
+            height:50px;
+            margin: 0 auto;
+        }
+        #thumbsUp a:hover{
+            background: cornflowerblue;
+        }
+        #commentBox{
+            width: 1020px;
+            height: 500px;
+            background: rgba(161, 211, 245, 0.7);
+            margin: 0 auto;
+        }
+        #commentText{
+            width: 200px;
+            border: 0;
+            border-bottom: 5px solid white;
+            font-size: 20px;
+            background: #ffffff00;
+            color: white;
+        }
+        #cButton{
+            width: 150px;
+            text-transform: upercase;
+            font-size: 20px;
+            color: white;
+            line-height: 50px;
+            border-radius: 30px;
+            transition: 0.2s;
+            border-color: white;
+            background: rgba(0,0,0,0);
+        }
+        #replyBox{
+            width: 1020px;
+            height: 500px;
+            border-style: solid;
+            border-color: rgba(67, 119, 214, 0.7);
+            border-width: 5px;
+            background: rgba(161, 211, 245, 0.7);
+            margin: 0 auto;
+        }
+        #replyText{
+            width: 200px;
+            border: 0;
+            border-bottom: 5px solid white;
+            font-size: 20px;
+            background: #ffffff00;
+            color: white;
+        }
+        #rButton{
+            width: 150px;
+            text-transform: upercase;
+            font-size: 20px;
+            color: white;
+            line-height: 50px;
+            border-radius: 30px;
+            transition: 0.2s;
+            border-color: white;
+            background: rgba(0,0,0,0);
+        }
+    </style>
+</head>
+<body background="./pic/background.jpg" background-size:100% 100%>
+    
+<div id="title1"><h1 align="center">Content Page</h1></div>   
+
+
+    <div id="title2"><h2 align="center">SCNU And University Of Aberdeen</h2></div>
+
+    <div id="message">
+        <ul>
+            <li><img src="./pic/profilephoto2.jpg"></li>
+            <li><a href="../user page/User_page.html">riu</a></li>
+            <li>From Guangdong, sent 2022/10/22/11:34</li>
+        </ul>
+    </div>
+
+    <div id="pictureBox">
+        <img src="./pic/img1.jpg" alt="SCNU"/>
+        <img src="./pic/img2.jpg" alt="Aberdeen"/>
+        <img src="./pic/img3.jpg" alt="SCNU"/>
+        <img src="./pic/img4.jpg" alt="Aberdeen"/>
+        <img src="./pic/img5.jpg" alt="SCNU"/>
+        <img src="./pic/img6.jpg" alt="Aberdeen"/>  
+        <img src="./pic/img7.jpg" alt="Aberdeen"/>
+        <img src="./pic/img8.jpg"/>
+        <img src="./pic/img9.jpg"/>
+    </div>
+
+    <div id="text" >
+        <div id="textcontent">There are some pictures of SCNU and Aberdeen, I think they are very beautiful
+        and wish one day I can go to Aberdeen to see the beautiful scenery in reality
+        rather than by photos. In addition, I add other two pictures which of my favorite.</div>
+        <div id="topic">
+            <ul>
+                <li><a href = "https://zhuanlan.zhihu.com/p/97604480"> # University Life </a></li>
+                <li><a href = "https://www.scnu.edu.cn/"> # SCNU </a></li>
+                <li><a href = "https://www.abdn.ac.uk/"> # Aberdeen </a></li>
+                <li><a href = "https://www.bilibili.com/video/BV1jt4y1e7oR/"> # My daily </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="thumbsUp">
+        <a href=""><img src="./pic/thumbsUp.jpg"></a>
+        <a href=><img src="./pic/forward.jpg"></a>
+        <a href=""><img src="./pic/collection.jpg" width="50" height="50"></a>
+    </div>
+
+    <div id="commentBox">
+        <div id="title3"><h1>Comment</h1></div>
+        <input id="commentText" placeholder="Input your comment:"></input>
+        <button id="cButton">comment</button>
+        <div id="comment"></div>
+    </div>
+
+    <div id="replyBox">
+
+        <div id="title4"><h1>Reply</h1></div>
+
+        <input id="replyText" placeholder="Input your reply:"></input>
+        <button id="rButton">reply</button>
+      
+    </div>
+</div>
+<script>
+    /*Get the user's name:*/
+        
+    /*Get the current date*/
+    var current=new Date();
+    /*Get the comment and print it:*/
+    function send(){
+        var content=document.getElementById("commentText").value;
+        var n=document.createElement("n");
+        c=current.toUTCString()
+        n.innerHTML="<hr>"+content+" "+c;
+        document.getElementById("comment").prepend(n);
+    }
+    document.getElementById("cButton").onclick=function(){send()}
+
+    function rep(){
+            var content=document.getElementById("replyText").value;
+            var m=document.createElement("m");
+            c=current.toUTCString
+            m.innerHTML="<hr>"+"********reply********"+"<br/>"+content+" "+c;
+            document.getElementById("comment").prepend(m);
+        }   
+        document.getElementById("rButton").onclick=function(){rep()}
+</script>
+</body>
+</html> 
