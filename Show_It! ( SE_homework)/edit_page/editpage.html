@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Editing Page</title>
+<style>
+.a{
+    width: 100px;
+    height: 50px;
+}
+.a a{
+    width: 200px;
+    height: 20px;
+    text-align: left;
+    display: inline-block;
+    text-decoration: none;
+    color: #4a4b4e;
+    line-height: 20px;
+}
+.a a:hover{
+    color: black;
+}
+.title{
+    background-color:rgb(194, 221, 247,0.8);
+    color:rgb(26, 26, 26);
+    margin:40px;
+    padding: "200";
+}
+.title a{
+    text-decoration: none;
+    color: #4a4b4e;
+}
+.title a:hover{
+    color: black;
+}
+.title h2{
+    text-align: center;
+}
+.mainEdit{
+    background-color: rgb(194, 221, 247,0.8);
+    color: rgb(136, 135, 135);
+    margin:40px;
+    padding:20px;
+}
+.tag{
+    background-color: rgb(194, 221, 247,0.8);
+    color: rgb(60, 59, 59);
+    margin:40px;
+    padding:20px;
+}
+.release{
+    background-color:rgb(231, 63, 63,0.9);
+    color:rgba(251, 247, 247);
+    margin:40px;
+    padding:"100";
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+}
+.text{
+    color: rgb(136, 135, 135);
+    background-color: rgb(194, 221, 247,0.8);
+    width: 300px;
+    height: 20px;
+}
+</style>
+</head>
+<body background="./pic/background.jpg">
+
+<div class="title">
+    <!-- <p>&nbsp;&lt;back<div style="text-align: center;"> -->
+    <a href="#">&nbsp;&lt;back</a>
+    <h2>Editing</h2>
+</div>
+
+<div class="mainEdit">
+<!-- <p>please write your idea at here...</p> -->
+    <input type="text" value="please write your idea at here..." class="text" />
+    <pre>
+    <img src="./pic/background.jpg" width="150" height="150" />   <img src="./pic/editpage picture2.jpg" width="150" height="150" />
+    </pre>
+
+    <div class="a">
+        <a href="#">@your friends</a>
+        <a href="#">#your tag</a>
+    </div>
+
+</div>
+
+<div class="tag"  align="center">
+    <p><b>You can add some tags to make your post be seen by more people:</b></p>
+    <!-- <table border="4" align=center width=300px; height=30px;>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align="center">search</td>
+    </tr>
+    </table> -->
+    <select style="margin:center; width:70px; height:30px; background-color: hwb(209 76% 3%);">
+        <option value="food">Food</option>
+        <option value="study">Study</option>
+        <option value="question">Question</option>
+        <option value="notice">Notice</option>
+    </select>
+    <!-- <pre>
+    </pre>
+    <table border="1" align=center cellspacing = "10">
+    <tr>
+        <th>hot topic:</th>
+        <td>food</td>
+        <td>study</td>
+        <td>ask question</td>
+        <td>notice</td>
+    </tr>
+    </table> -->
+</div>
+
+<div class="release">
+    <p style="text-align: center;">Release</p>
+</div>
+
+
+</body>
+</html>
