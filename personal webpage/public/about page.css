@@ -1,0 +1,179 @@
+/* .wrapper{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: rgb(234, 136, 136);
+} */
+*{
+    box-sizing: border-box;  /*内减模式*/
+}
+body{
+    background-image: url(./pic/Antibes\,Afternoon\ Effect\,1888.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title{
+    width: 86%;
+    height: 90px;
+    /* background-color: #f6b3b3; */
+    margin: 1.5% auto 0;
+    padding: 0;
+
+}
+.title hr{
+    border: 3px solid #fff;
+    margin: 0;
+}
+.headline{
+    width: 1050px;
+    height: 70px;
+}
+.back{
+    width: 525px;
+    height: 70px;
+    float: left;
+    padding: 5px 0 5px 40px;
+}
+.back a{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    padding: 5px 5px;
+}
+.back a:hover{
+    background-color:rgba(172, 76, 76, 0.3);;
+}
+.back img{
+    width: 50px;
+    height: 50px;
+}
+.head{
+    width: 525px;
+    height: 70px;
+    float: left;
+}
+.head h1{
+    text-align: right;
+    padding: 0 60px;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+    /* color: rgb(139, 44, 44); */
+}
+
+.side_col{
+    float: left;
+    width: 18%;
+    /* width: 220px; */
+    height: 500px;
+    background-color: rgb(255, 255, 255,0.45);
+    /* background-color: rgba(172, 76, 76, 0.35); */
+    border-radius: 20px;
+    /* border:5px solid rgba(146, 57, 57, 0.3); */
+    margin: 1.5% 2% 2% 9%;
+    padding: 2%;
+    /* padding: 25px; */
+}
+.side_col img{
+    width: 170px;
+    height: 170px;
+    margin-bottom: 5px;
+}
+.basic_info{
+    width: 170px;
+    height: 240px;
+    background-color: rgba(172, 76, 76, 0.4);
+    /* background-color: rgb(255, 255, 255,0.4); */
+    border-radius: 20px;
+    /* padding: 10px 2px; */
+    margin-top: 5px;
+}
+.basic_info ul{
+    list-style: none;
+    padding: 10px 5px;
+}
+.basic_info ul a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    /* color: rgb(140, 43, 43); */
+    font-family: 'Times New Roman', Times, serif;;
+    line-height: 28px;
+}
+.basic_info ul img{
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+.content{
+    float: left;
+    width: 60%;
+    /* background-color: rgb(255, 255, 255,0.4); */
+    margin: 1.5% 5% 2% 0.5%;
+    
+    /* border: 5px solid rgba(255, 255, 255); */
+    /* padding: 10px 20px; */
+    
+    
+}
+.subtitle{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-indent: 0;
+}
+.subtitle{
+    margin: 10px 0 5px;
+}
+.con{
+    text-indent: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 0 8px;
+    
+}
+.content a{
+    text-decoration: none;
+    color:rgb(139, 44, 44);
+}
+.content1{
+    width: 750px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    color: rgb(139, 44, 44);
+    /* color: rgb(255, 255, 255); */
+    line-height: 28px;
+    /* background-color:  rgba(172, 76, 76, 0.3); */
+    background-color: rgb(255, 255, 255,0.5);
+    border-radius: 20px;
+    /* border: 5px solid rgb(255, 255, 255,0.9); */
+}
+.content1 a:hover{
+    background-color: rgba(172, 76, 76, 0.35);
+}
+.content2{
+    width: 750px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    /* color: rgb(255, 255, 255); */
+    color: rgb(139, 44, 44);
+    line-height: 28px;
+    background-color: rgb(255, 255, 255,0.55);
+    /* background-color:  rgba(172, 76, 76, 0.35); */
+    border-radius: 20px;
+    /* border: 5px solid rgb(139, 44, 44); */
+}
+.picture_author{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 400px;
+    height: 30px;
+    padding: 5px 20px;
+}
+.picture_author a{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+}

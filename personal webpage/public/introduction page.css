@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;  /*内减模式*/
+}
+body{
+    background-image: url(./pic/Antibes\,Afternoon\ Effect\,1888.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.introduction{
+    width: 41%;
+    height: 450px;
+    background-color: rgb(255, 255, 255,0.3);
+    border: 8px solid rgb(255, 255, 255,0.8);
+    border-radius: 25px;
+    /* margin: 40px 40px; */
+    margin: 6% 5%;
+    padding: 10px;
+    text-align: center;  /*让内容居中*/
+    float: left;
+}
+.introduction h1{
+    color:rgb(139, 44, 44);
+}
+.nav{
+    width: 99%;
+    height: 50px;
+    background-color:  rgb(255, 255, 255,0.5);
+    border-radius: 25px;
+    margin-bottom: 26px;
+}
+.nav ul{
+    list-style: none;
+}
+.nav li{
+    float: left;
+}
+.nav li a{
+    text-decoration: none;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    color:rgb(139, 44, 44);
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    display: inline-block;
+    
+}
+.nav li a:hover{
+    background-color:rgba(172, 76, 76, 0.35);
+
+}
+.content{
+    width: 99%;
+    background-color:rgba(172, 76, 76, 0.35);
+    border-radius: 20px;
+    padding: 0 5px;
+    margin-bottom: 26px;
+    
+}
+.content p{
+    line-height: 25px;
+    font-size: 15px;
+    /* color:rgb(127, 35, 35); */
+    color: rgb(139, 44, 44);
+}
+.connect{
+    width: 99%;
+    height: 110px;
+    background-color: rgb(255, 255, 255,0.5); 
+    border-radius: 20px;
+}
+.connect ul{
+    list-style: none;
+    padding: 10px 0;
+    
+}
+.connect li a{
+    display: inline-block;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(139, 44, 44);
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+}
+.connect li a:hover{
+    background-color: rgba(172, 76, 76, 0.35);
+}
+.connect li a img{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+.dec{
+    width: 41%;
+    height: 450px;
+    /* background-color: #fff; */
+    margin: 5% 2%;
+    padding: 40px;
+    color:#fff;
+    float: left;
+}
+hr{
+    border: 3px solid #fff;
+}
+.dec a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+}
+.dec a:hover{
+    background-color: rgba(154, 57, 57, 0.5);
+}
+.picture_author{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 400px;
+    height: 30px;
+    /* background-color: #fff; */
+    padding: 5px 20px;
+    /* margin: 0 auto; */
+}
+.picture_author a{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+.picture_author{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 400px;
+    height: 30px;
+    padding: 5px 20px;
+}
+.picture_author a{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+}

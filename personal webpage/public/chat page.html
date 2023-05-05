@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./chat application page.css">
+    <style>
+        .info_li{
+            font-size:larger;
+            color:#fff;
+            background-color:rgba(172, 76, 76, 0.4);
+            border-radius: 20px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<div class="title">
+    <hr>
+    <div class="headline">
+        <div class="back">
+            <a href="./introduction page.html"><img src="./pic/back.png" alt=""></a>
+        </div>
+        <div class="head">
+            <h1>CHAT</h1>
+        </div>  
+    </div>
+    <hr>
+</div>
+<div class="info"></div>
+
+<div class="inputName"> 
+    enter your User Name 
+    <input type="text" class="input">
+    (with the end of 'Enter')
+</div>
+
+<div class="board">
+    <div class="chatboard">
+        
+    </div>
+    <div class="user_state">
+        Online User
+        <div class="onlineU"></div>
+    </div>
+    <form class="message_sent">
+        <div class="keyboard">
+            <textarea type='text' class="textArea"></textarea>
+            <button type="submit" class="sendButton">Send</button>
+        </div>
+    </form>
+    
+</div>
+<div class="picture_author">
+    <a href="">Antibes, Afternoon Effect,1888, by Monet</a>
+</div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>src="https://cdn.socket.io/4.5.4/socket.io.min.js"</script> 
+    <script>
+        (function(){
+            const inputName = document.querySelector('.inputName')
+            const input = document.querySelector('.input')
+            userList = document.querySelector('.onlineU')
+            messageForm = document.querySelector('.message_sent')
+            messages = document.querySelector('.chatboard')
+            typing = document.querySelector('textarea')
+
+            //connect to socket.io
+            var socket = io({'timeout':5000, 'connect timeout':5000})
+            //chect for connection
+            if (socket !==undefined){
+                console.log('connected to socket');
+            }
+
+            input.addEventListener('keyup',e=>{
+                if(e.key ==='Enter'){
+                    if(input.value.trim()!==''){
+                        e.preventDefault()
+                        // console.log('ok')
+                        socket.emit('login',input.value,()=>{
+                            inputName.style = 'display:none'
+                        })
+                    }
+                }
+            })
+
+            socket.on('loadUser',users=>{
+                userList.innerHTML = ``
+                users.forEach(user=>{
+                    var userli = document.createElement('li')
+                    // userli.setAttribute('class','collection-item')
+                    userli.innerHTML=`<a class='${user}'>${user}</a>`
+                    userList.insertBefore(userli,userList.firstChild)
+                })
+
+            })
+
+            
+            
+            typing.addEventListener('focus',()=>{
+                // console.log('is typing');
+                socket.emit('isTyping')
+            })
+
+            socket.on('Typing',userName=>{
+                const find = document.querySelector(`.${userName}`)
+                // console.log(find);
+                find.innerText = `${userName} (is typing)`
+            }) 
+
+            typing.addEventListener('blur',()=>{
+                // console.log('not typing');
+                socket.emit('notTyping')
+            })
+
+            socket.on('stopTyping',userName=>{
+                const find = document.querySelector(`.${userName}`)
+                // console.log(find);
+                find.innerText = `${userName}`
+            }) 
+
+
+            messageForm.addEventListener('submit',e=>{
+                e.preventDefault()
+                const msg = document.querySelector('.textArea').value
+                // console.log(msg)
+                document.querySelector('.textArea').value=''
+                socket.emit('chatMessage',msg)
+            })
+
+            socket.on('loadMessage',msgHis=>{
+                var message_div = document.createElement('div')
+                message_div.classList.add('msgBox')
+                message_div.innerHTML = `<li>${msgHis.name} : ${msgHis.msg} </li>`
+                // message.textContent=msgHis.name + ":" + msgHis.msg
+                messages.appendChild(message_div)
+                messages.insertBefore(message_div,messages.lastChild)
+            })
+
+            socket.on('someoneCome',userName=>{
+                const find = document.querySelector('.info')
+                var li = document.createElement('div')
+                li.innerText = `${userName} join`
+                li.classList.add('info_li')
+                find.appendChild(li)
+                find.insertBefore(li,find.lastChild)
+                setTimeout(()=>{
+                    li.remove()
+                },2000)
+            })
+
+            socket.on('someoneLeave',userName=>{
+                const find = document.querySelector('.info')
+                var li = document.createElement('div')
+                li.innerText = `${userName} leave`
+                li.classList.add('info_li')
+                find.appendChild(li)
+                find.insertBefore(li,find.lastChild)
+                setTimeout(()=>{
+                    li.remove()
+                },3000)
+            })
+
+            
+
+        })()
+    </script>
+</body>
+</html>
